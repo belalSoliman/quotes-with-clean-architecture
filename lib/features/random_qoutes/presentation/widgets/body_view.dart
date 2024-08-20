@@ -11,8 +11,8 @@ class CustomBodyView extends StatelessWidget {
     return Center(
       child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
         Container(
-          height: context.height * 0.3,
-          width: context.width * 0.9,
+          margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+          padding: const EdgeInsets.all(15),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(22),
             color: HexColor('#202053'),
@@ -20,29 +20,21 @@ class CustomBodyView extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                textAlign: TextAlign.center,
-                "hello my names belal soliman mohamed elsadany iam flutter developer and i love my mom , country , trust  factory ",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: context.width * 0.07,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+                  textAlign: TextAlign.center,
+                  "hello my names belal soliman mohamed elsadany iam flutter developer and i love my mom , country , trust  factory ",
+                  style: Theme.of(context).textTheme.headlineLarge),
               SizedBox(
                 height: context.height * 0.01,
               ),
               Text(
                 "belal soliman",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: context.width * 0.05,
-                    fontWeight: FontWeight.bold),
+                style: Theme.of(context).textTheme.headlineLarge,
               ),
             ],
           ),
         ),
         SizedBox(height: context.height * 0.02),
-        ReloadBtn(),
+        const ReloadBtn(),
       ]),
     );
   }

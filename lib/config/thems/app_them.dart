@@ -19,5 +19,12 @@ ThemeData appTheme() {
             fontSize: 40,
             fontWeight: FontWeight.bold,
             color: AppColors.primaryColor,
-          )));
+          )),
+      textTheme: const TextTheme(
+        headlineLarge: TextStyle(
+          color: Colors.white,
+          fontSize: 22,
+          fontWeight: FontWeight.bold,
+        ),
+      ));
 }
